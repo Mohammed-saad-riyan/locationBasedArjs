@@ -46,3 +46,4 @@ const locations = [
 
     // Add more location objects here following the same structure
 ];
+export default locations;
