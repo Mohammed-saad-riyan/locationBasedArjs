@@ -1,6 +1,6 @@
 // change the name and the coordinates with respect to college
 
-const locations = [
+var locations = [
     {
         name: "Masjid",
         latitude: 17.386812, 
