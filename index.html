@@ -6,7 +6,8 @@
     <title>NavigateAR</title>
     <link rel="stylesheet" href="main.css">
     <script src="locations.js"></script>
-    <script src="index.js"></script>
+    <script src="Index.js"></script>
+    
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
@@ -17,7 +18,30 @@
     vr-mode-ui="enabled: false"
     arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
     >
-    
+    <!-- <a-text
+        value="Bed Room"
+        look-at="[gps-camera]"
+        scale="120 120 120"
+        gps-entity-place="latitude: 17.387516; longitude: 78.405588;"
+    ></a-text>
+    <a-text
+        value="Ground"
+        look-at="[gps-camera]"
+        scale="120 120 120"
+        gps-entity-place="latitude: 17.388631; longitude: 78.404622;"
+    ></a-text>
+    <a-text
+        value="Masjid"
+        look-at="[gps-camera]"
+        scale="120 120 120"
+        gps-entity-place="latitude: 17.386907; longitude: 78.404924;"
+    ></a-text>
+    <a-text
+        value="Mart"
+        look-at="[gps-camera]"
+        scale="120 120 120"
+        gps-entity-place="latitude: 17.386607; longitude: 78.405020;"
+    ></a-text> -->
     <a-camera gps-camera rotation-reader="true"> </a-camera>
     </a-scene>
 </body>

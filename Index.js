@@ -2,14 +2,14 @@ import locations from './locations.js';
 
 const camera = document.querySelector('a-camera');
 
-function getUserLocation() {
+// function getUserLocation() {
     const userLatitude = camera.getAttribute('gps-camera').latitude;
     const userLongitude = camera.getAttribute('gps-camera').longitude;
 
-    console.log(`User Location: Latitude: ${userLatitude}, Longitude: ${userLongitude}`);
-}
+    console.log("User Location:", userLatitude, userLongitude);
+// }
 
-getUserLocation();
+// return getUserLocation();
 
 function calculateDistance(lat1, lon1, lat2, lon2) {
     const R = 6371e3;
