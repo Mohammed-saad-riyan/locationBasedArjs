@@ -30,22 +30,19 @@ function radians(degrees) {
     return degrees * Math.PI / 180;
 }
 
-import locations from './locations.js'; // Assuming locations.js is in the same directory
+import locations from 'locations.js'; // Assuming locations.js is in the same directory
 
 function calculateDistancesAndHighlight(userLatitude, userLongitude) {
     locations.forEach(location => {
-    const distance = calculateDistance(userLatitude, userLongitude, location.latitude, location.longitude);
-    const radiusThreshold = 50; // Adjust this value as needed
+        const distance = calculateDistance(userLatitude, userLongitude, location.latitude, location.longitude);
+        const radiusThreshold = 500; 
 
-    if (distance <= radiusThreshold) {
-        const marker = document.createElement('a-image');
-        marker.setAttribute('gps-entity-place', `latitude: ${location.latitude}; longitude: ${location.longitude}`);
-        marker.setAttribute('src', location.name); // Assuming location object has an "icon" property
-        marker.setAttribute('scale', '0.5 0.5 0.5'); // Adjust scale as needed
-        document.querySelector('a-scene').appendChild(marker);
-    }
-});
+        if (distance <= radiusThreshold) {
+            const marker = document.createElement('a-text');
+            marker.setAttribute('value', location.name);
+            marker.setAttribute('position', `${location.longitude} ${location.latitude} 1`); 
+            marker.setAttribute('scale', '2 2 2');
+            document.querySelector('a-scene').appendChild(marker);
+        }
+    });
 }
-
-// Call functions to get user location and handle highlighting
-getUserLocation();
