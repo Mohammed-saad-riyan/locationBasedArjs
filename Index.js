@@ -38,9 +38,9 @@ function calculateDistancesAndHighlight(userLatitude, userLongitude) {
     const radiusThreshold = 50; // Adjust this value as needed
 
     if (distance <= radiusThreshold) {
-        const marker = document.createElement('a-text');
+        const marker = document.createElement('a-image');
         marker.setAttribute('gps-entity-place', `latitude: ${location.latitude}; longitude: ${location.longitude}`);
-        marker.setAttribute('src', location.icon); // Assuming location object has an "icon" property
+        marker.setAttribute('src', location.name); // Assuming location object has an "icon" property
         marker.setAttribute('scale', '0.5 0.5 0.5'); // Adjust scale as needed
         document.querySelector('a-scene').appendChild(marker);
     }
