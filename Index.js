@@ -1,4 +1,5 @@
-import locations from './locations.js'; // Import location data
+alert("Hello")
+import location from './locations.js'; 
 
 const camera = document.querySelector('a-camera');
 
@@ -44,7 +45,7 @@ function createMarker(location, userLatitude, userLongitude, radiusThreshold) {
 function calculateDistancesAndHighlight() {
     const userLatitude = camera.getAttribute('gps-camera').latitude;
     const userLongitude = camera.getAttribute('gps-camera').longitude;
-    const radiusThreshold = 50; // Adjust the radius threshold (in meters)
+    const radiusThreshold = 50; 
 
     locations.forEach(location => {
     createMarker(location, userLatitude, userLongitude, radiusThreshold);
