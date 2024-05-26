@@ -36,8 +36,8 @@ function createMarker(location, userLatitude, userLongitude, radiusThreshold) {
     const marker = document.createElement('a-text');
     marker.setAttribute('value', location.name);
     marker.setAttribute('position', `${location.longitude} ${location.latitude} 1`); // Adjust Z-axis position as needed
-    marker.setAttribute('scale', '2 2 2'); // Adjust text size as needed
-    marker.setAttribute('look-at', '[gps-camera]'); // Look at the camera
+    marker.setAttribute('scale', '40 40 40'); 
+    marker.setAttribute('look-at', '[gps-camera]'); 
     document.querySelector('a-scene').appendChild(marker);
 }
 }
