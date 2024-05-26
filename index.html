@@ -22,6 +22,7 @@
         look-at="[gps-camera]"
         scale="120 120 120"
         gps-entity-place="latitude: 17.387516; longitude: 78.405588;"
+        icon=""
     ></a-text>
     <a-text
         value="Ground"
@@ -35,6 +36,12 @@
         scale="120 120 120"
         gps-entity-place="latitude: 17.386907; longitude: 78.404924;"
     ></a-text>
+    <a-image
+        src="image.png" // Replace with your icon image path
+        look-at="[gps-camera]"
+        scale="0.2 0.2 0.2" // Adjust scale as needed
+        gps-entity-place="latitude: 17.387516; longitude: 78.405588;"
+></a-image>
     <a-camera gps-camera rotation-reader="true"> </a-camera>
     </a-scene> 
     <script src="Index.js"></script>
