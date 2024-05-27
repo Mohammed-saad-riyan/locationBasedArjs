@@ -1,5 +1,5 @@
 alert("Hello")
-import location from './locations.js'; 
+import locations from './locations.js'; 
 
 const camera = document.querySelector('a-camera');
 
