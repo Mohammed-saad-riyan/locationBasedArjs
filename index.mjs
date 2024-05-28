@@ -28,7 +28,7 @@ function radians(degrees) {
   return degrees * Math.PI / 180;
 }
 
-function createMarker(location) {
+function createMarker(location, userLatitude, userLongitude, radiusThreshold) {
     const distance = calculateDistance(userLatitude, userLongitude, location.latitude, location.longitude);
 
     if (distance <= radiusThreshold) {
